@@ -1,0 +1,153 @@
+.tab1 {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #fff !important;
+  margin: 0 !important;
+}
+.tab1__item {
+  flex: 1;
+  flex-basis: 120px;
+}
+.tab1__link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #65c6ba;
+  cursor: pointer;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+.tab1__link.on {
+  background-color: #b1e2dc;
+}
+.tab1-body__item {
+  margin: 30px 15px;
+  display: none;
+  text-align: center;
+}
+.tab1-body__item.on {
+  display: block;
+}
+
+/* テーブルのタブ切り替え */
+  /* .tab-group{
+    display: flex;
+    justify-content: center;
+  }
+  .tab{
+    flex-grow: 1;
+    padding:5px;
+    list-style:none;
+    border:solid 1px #CCC;
+    text-align:center;
+    cursor:pointer;
+  } */
+  /* .panel-group{
+    height:100px;
+    border:solid 1px #CCC;
+    border-top:none;
+    background:#eee;
+  }
+  .panel{
+    display:none;
+  } */
+  /* .tab.is-active{
+    background:#F00;
+    color:#FFF;
+    transition: all 0.2s ease-out;
+  } */
+  /* .panel.is-show{
+    display:block;
+  } 
+   */
+/* タブアイテムを横並びにする */
+  /* .c-tabs_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+} */
+
+/* タブグループの下部にグレーの線をひく */
+/* .c-tabs_list::after {
+  background-color: #8598a7;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+} */
+
+
+/* タブアイテムの形状を設定 */
+/* .c-tabs_item {
+  padding: 0 0.8em;
+  border-radius: 5px 5px 0 0;
+  margin-right: 13px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+} */
+
+/* タブアイテムのデザインを設定 */
+/* .c-tabs_item a,
+.c-tabs_item span {
+    -ms-flex-direction: column;
+    -ms-flex-pack: center;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    background-color:#225588;
+    border: 1px solid #004bb1;
+    border-bottom-color: #fff;
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 100%;
+    justify-content: center;
+    line-height: 1.2;
+    min-height: 2.8em;
+    min-width: 8em;
+    padding: 0.3em 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+} */
+
+/* マウスオン時の設定 */
+/* .c-tabs_item a:hover {
+  opacity: 0.6;
+} */
+
+/* 要素を一番手前に持ってくる */
+/* .c-tabs_item.is-active {
+  z-index: 11;
+} */
+
+/* タブのデザイン設定 */
+/* .c-tabs_item.is-active::before {
+  background-color: #004bb1;
+  content: "";
+  display: block;
+  height: 5px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.c-tabs_item.is-active span {
+  background-color: #fff;
+  border: 1px solid #8598a7;
+  border-bottom-color: #fff;
+  color: #004bb1;
+} */
