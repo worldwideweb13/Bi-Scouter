@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+ <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<!-- データファイルの列の定義 -->
+  <RECORD>
+  <!-- ID => 1=sku,2=product_name,3=stock,4=store_id,5=regist_date,6=purchase_price 7,8,9,10="" -->
+   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR=","/>
+   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR=","/>
+   <FIELD ID="3" xsi:type="CharTerm" TERMINATOR=","/>
+   <FIELD ID="4" xsi:type="CharTerm" TERMINATOR=","/>
+   <FIELD ID="5" xsi:type="CharTerm" TERMINATOR=",">
+   <FIELD ID="6" xsi:type="CharTerm" TERMINATOR=","/>
+   <FIELD ID="7" xsi:type="CharTerm" TERMINATOR=","/>  
+   <FIELD ID="8" xsi:type="CharTerm" TERMINATOR=","/>  
+   <FIELD ID="9" xsi:type="CharTerm" TERMINATOR=","/>
+   <FIELD ID="10" xsi:type="CharTerm" TERMINATOR=","/>
+   <FIELD ID="11" xsi:type="CharTerm" TERMINATOR="\r\n"/>
+  </RECORD>
+
+  <!-- データファイルの列のINDEXを使って、インポート先を定義(マッピング) -->
+  <ROW>
+   <!-- SOURCE => 2=sku, 3=product_name, 4=purchase_price 5=stock, 6=store_id, 9=regist_date,  --> 
+   <COLUMN SOURCE="7" NAME="sku" xsi:type="SQLINT"/>
+   <COLUMN SOURCE="1" NAME="sku" xsi:type="SQLNVARCHAR"/>
+   <COLUMN SOURCE="2" NAME="product_name" xsi:type="SQLNVARCHAR"/>
+   <COLUMN SOURCE="6" NAME="purchase_price" xsi:type="SQLINT"/>
+   <COLUMN SOURCE="3" NAME="stock" xsi:type="SQLINT"/>
+   <COLUMN SOURCE="4" NAME="store_id" xsi:type="SQLNVARCHAR"/>
+   <COLUMN SOURCE="8" NAME="regist_date" xsi:type="SQLNVARCHAR"/>
+   <COLUMN SOURCE="9" NAME="regist_date" xsi:type="SQLNVARCHAR"/>
+   <COLUMN SOURCE="4" NAME="regist_date" xsi:type="SQLNVARCHAR"/>
+   <COLUMN SOURCE="10" NAME="regist_date" xsi:type="SQLNVARCHAR"/>
+  </ROW>
+ </BCPFORMAT>
