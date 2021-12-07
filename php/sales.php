@@ -37,7 +37,7 @@ sschk();
         <!-- 日付入力画面 -->
             <p class="title">日付入力</p>
             <p class="subtitle">検索対象の日付を数字で入力してください</p>
-            <form action="./test.php" id="input_form">
+            <form action="./sales_select.php" id="input_form">
                 <label for="sheet_name">開始日:  <input id="js_startDate" type="date" class="input_text" name="start_date"></label><br>
                 <label for="sheet_id">終了日: <input id="js_lastDate" type="date" class="input_text" name="last_date"></label>
                 <div class="submit_action">

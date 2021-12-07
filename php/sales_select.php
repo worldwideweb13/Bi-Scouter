@@ -1,8 +1,14 @@
 <?php
+// POSTされたJSON文字列を取り出し
 $json = file_get_contents("php://input");
+// JSON文字列をobjectに変換
 $contents = json_decode($json,true);
+var_dump($contents); 
+
 $start_date = $contents["start_date"];
 $last_date = $contents["last_date"];
+// var_dump($start_date);
+// var_dump($last_date);
 
 // echo $last;
 
