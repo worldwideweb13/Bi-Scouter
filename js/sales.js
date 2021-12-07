@@ -1,9 +1,11 @@
 function insertTable(start_date,last_date){
+    // axios.post('ファイル名',{key:val})...json形式でdataを送る
     const res = axios.post('../php/sales_select.php', {
         start_date: start_date,
-        last_date: last_date
+        last_date: last_date,
       }).then(res => {
           res.data.result.forEach(key => {
+              console.log("OK?");     
               console.log(key);
               //const wrapper = $('#js-myTable')
               const wrapper = document.getElementById('js-myTable')
