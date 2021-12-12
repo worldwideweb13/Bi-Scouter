@@ -41,7 +41,7 @@ $alert_num = $_GET["alert_num"];
     <form action="pro_csv_after_copy.php" id="input_form" method="post" enctype="multipart/form-data">
             <input type="file" class="file_up" name="fname"><br>
             <input type="submit" class="button" value="アップロード">
-        </form>
+    </form>
     <!-- JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">var alert_num = "<?= $alert_num ?>";</script>
