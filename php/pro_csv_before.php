@@ -20,6 +20,7 @@ $alert_num = $_GET["alert_num"];
 </head>
 <body>
     <div class="header">
+        <!-- ヘッダーメニュー -->
         <img src="../img/rogo.png" alt="" id="headerogo">
         <div class="menu">
             <div class="session">
@@ -27,14 +28,14 @@ $alert_num = $_GET["alert_num"];
                 <div class="logout"><a href="logout.php"><p>LOG OUT</p></a></div>
             </div>
             <ul class="listmenu">
-                <li><a href="./register.php">Register</a></li>
-                <li><a href="./index.php">Stock Report</a></li>
-                <li><a href="#news">Sales Report</a></li>
-                <li><a href="./sheet_register.php">入庫処理</a></li>
-                <li><a href="./pro_csv_before.php">売上集計</a></li>
+            <li><a href="./register.php">Register</a></li>
+            <li><a href="./index.php">在庫レポート</a></li>
+            <li><a href="./sales.php">売上レポート</a></li>
+            <li><a href="./sheet_register.php">入庫処理</a></li>
+            <li><a href="./pro_csv_before.php">売上集計</a></li>
             </ul>
         </div>
-    </div>
+    </div>  
     <p class="title">売上集計　CSVファイルから売上データを取り込みます</p>
     <p class="subtitle">※規定フォーマットのCSVファイルをアップロードして下さい</p>
     <form action="pro_csv_after_copy.php" id="input_form" method="post" enctype="multipart/form-data">
