@@ -21,12 +21,12 @@ $stock_result_text;
 // ファイルアップロード処理
 if(is_uploaded_file($tempfile)){
     if(move_uploaded_file($tempfile,$filename)){
-        $success_message =  "<li>".$filename . "をアップロードしました。</li>";                
+        $success_message =  "<div class='ttl'>".$filename . "をアップロードしました。</div>";                
     }else{
-        $error_message =  "<li>"."ファイルをアップロードできません。</li>";
+        $error_message =  "<div class='ttl'>ファイルをアップロードできません。</div>";
     }
 } else {    
-    $error_message = "<li>"."ファイルが選択されていません。</li>";
+    $error_message = "<div class='ttl'>ファイルが選択されていません。</div>";
 }
 
 // fopenでファイルを開く（'r'は読み込みモードで開く）
@@ -111,9 +111,8 @@ while ($list = fgetcsv($fp)) {
         }                     
     }
 } 
-fclose($fp);
-include("./funcs.php");
-$pdo = db_conn();
+    fclose($fp);
+    $pdo = db_conn();
 // 返金テーブル="rt_sales_table"の更新処理
     foreach($rt_sales_table as $val){
         $sql = "INSERT INTO rt_sales_table(ts_id,ts_date,sku,purchase_price,sales,tax,txSales,rt_stock,deposit,up_date) VALUES(:ts_id,:ts_date,:sku,:purchase_price,:sales,:tax,:txSales,:rt_stock,:deposit,:up_date)";
@@ -135,7 +134,7 @@ $pdo = db_conn();
         $error = $stmt->errorInfo();
         exit("SQLError:".$error[2]);
         } else{
-            $rt_sales_result_text = "<li>返金テーブル更新処理完了</li>";
+            $rt_sales_result_text = "<dl><dt>返金テーブル更新処理完了</dt></dl>";
         }                
 // 返品手数料テーブル="tsf_table"の更新処理
     foreach($tsf_table as $val){
@@ -152,7 +151,7 @@ $pdo = db_conn();
         $error = $stmt->errorInfo();
         exit("返品手数料テーブルのSQLError:".$error[2]);
         } else{
-            $tsf_result_text = "<li>返品手数料テーブル更新処理完了</li>";
+            $tsf_result_text = "<dl><dt>返品手数料テーブル更新処理完了</dt></dl>";
         }                  
 //  入金額テーブル="$ts_table"の更新処理              
     foreach($ts_table as $val){
@@ -169,7 +168,7 @@ $pdo = db_conn();
         $error = $stmt->errorInfo();
         exit("入金額テーブルのSQLError:".$error[2]);
         } else{
-            $ts_result_text = "<li>入金額テーブル更新処理完了</li>";
+            $ts_result_text = "<dl><dt>入金額テーブル更新処理完了</dt></dl>";
         } 
 
 // 売上テーブル="sales_table"の更新処理
@@ -193,7 +192,7 @@ $pdo = db_conn();
         $error = $stmt->errorInfo();
         exit("売上テーブルのSQLError:".$error[2]);
         } else{
-            $sales_result_text = "<li>売上テーブル更新処理完了</li>";
+            $sales_result_text = "<dl><dt>売上テーブル更新処理完了</dt></dl>";
         }                 
 //  在庫管理テーブル="stock_table"→課題：stocktableのstockを加減算するsql構文に書き換え
     foreach($stock_table as $val){
@@ -210,7 +209,7 @@ $pdo = db_conn();
         $error = $stmt->errorInfo();
         exit("在庫管理テーブルのSQLError:".$error[2]);
         } else{
-            $stock_result_text = "<li>在庫管理テーブル処理完了</li>";
+            $stock_result_text = "<dl><dt>在庫管理テーブル更新処理完了</dt></dl>";
     }
 ?>
 
@@ -243,20 +242,20 @@ $pdo = db_conn();
                 </ul>
             </div>
         </div>
-        <ul>
-            <?php if ($success_message) : ?>
-                <?php echo $success_message ?>
-            <?php elseif($error_message) : ?>
-                <?php echo $error_message ?>
+        <div class="container">
+            <?php if ($success_message) : echo $success_message ?>
+            <?php elseif($error_message) : echo $error_message ?>
             <?php endif; ?>
-            <?php if($rt_sales_result_text) echo $rt_sales_result_text; ?>
-            <?php if($tsf_result_text) echo $tsf_result_text; ?>
-            <?php if($ts_result_text) echo $ts_result_text; ?>
-            <?php if($sales_result_text) echo $sales_result_text; ?>
-            <?php if($stock_result_text) echo $stock_result_text; ?>
-        </ul>
+            <div class="topics">
+                <?php if($rt_sales_result_text) echo $rt_sales_result_text; ?>
+                <?php if($tsf_result_text) echo $tsf_result_text; ?>
+                <?php if($ts_result_text) echo $ts_result_text; ?>
+                <?php if($sales_result_text) echo $sales_result_text; ?>
+                <?php if($stock_result_text) echo $stock_result_text; ?>
+            </div>
+            <input type="button"  class="button" onclick="location.href='./pro_csv_before.php'" value="戻る">
+        </div>      
         <!-- <form action="pro_csv_after_copy.php" id="input_form" method="post" enctype="multipart/form-data"> -->
-        <input type="button"  class="button" onclick="location.href='./pro_csv_before.php'" value="戻る">
         <!-- </form> -->
     </div>
 </body>
