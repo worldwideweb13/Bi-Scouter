@@ -1,7 +1,8 @@
-#ECサイト 棚卸しツール
+# ECサイト 棚卸しツール
 
 [![IMAGE ALT TEXT HERE](thumbnailImage.png)](https://youtu.be/9XpErusLM_g)
 
+### 概要
 * 制作期間： 3日間
 * 使用技術： HTML,CSS,JS,PHP
 * プロダクト紹介映像: https://youtu.be/9XpErusLM_g
