@@ -1,11 +1,11 @@
 # ECサイト 棚卸しツール
 
-[![IMAGE ALT TEXT HERE](thumbnailImage.png)](https://youtu.be/9XpErusLM_g)
+[![IMAGE ALT TEXT HERE](thumbnailImage.png)](https://youtu.be/xwcmHFuv7Jo)
 
 ### 概要
 * 制作期間： 3日間
 * 使用技術： HTML,CSS,JS,PHP
-* プロダクト紹介映像: https://youtu.be/9XpErusLM_g
+* プロダクト紹介映像: https://youtu.be/xwcmHFuv7Jo
 
 現在運営しているECサイトの実業務で行っている月毎の棚卸し額の算出を自動化するツールを作成してみました。
 本プロダクトの着地として、自社の在庫管理をトータルで行えるツールに仕上げたいと考えております。 （リポジトリは別に用意予定）
