@@ -1,4 +1,4 @@
-# ECサイト 棚卸しツール
+# ECサイト Bi-Scouter(在庫管理ツール)
 
 [![IMAGE ALT TEXT HERE](thumbnailImage.png)](https://youtu.be/xwcmHFuv7Jo)
 
