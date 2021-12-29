@@ -14,6 +14,7 @@ ECサイト運営者向けの売上／在庫管理ツールを作成しました
 * php 7.4.2
 * MySql 5.7.26
 * MAMP推奨
+* 事前にGoogleSheetAPIを有効化しておく必要があります。[credentials.json](https://github.com/worldwideweb13/Bi-Scouter/blob/b16eddf92b9f48a0b005e68a98b30c68e5300d14/credentials.json)に自身のSheetAPI情報を設定してください。
 
 DBは[gs_db.sql](gs_db.sql)をMySqlにインポートして下さい。テストデータが既に含まれているデータファルになります。
 アプリの利用手順は以下になります。(※　sqlデータには全てのデータがセットされているため、スプレッドシート、csvファイルの読み込みは不要です)
