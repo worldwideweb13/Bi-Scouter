@@ -16,6 +16,7 @@ ECサイト運営者向けの売上／在庫管理ツールを作成しました
 * MAMP推奨
 * 事前にGoogleSheetAPIを有効化しておく必要があります。[credentials.json](https://github.com/worldwideweb13/Bi-Scouter/blob/b16eddf92b9f48a0b005e68a98b30c68e5300d14/credentials.json)に自身のSheetAPI情報を設定してください。Google Spreadsheet APIを使うには、Google API コンソールで有効にする必要があります。詳細は下記の記事が参考になるので確認ください。
 [Laravel で注文データをGoogleスプレッドシートに追加する](https://blog.capilano-fw.com/?p=1816)
+
 上記の記事の「Google APIでスプレッドシートを有効にする」の項を参考
 
 DBは[gs_db.sql](gs_db.sql)をMySqlにインポートして下さい。テストデータが既に含まれているデータファルになります。
