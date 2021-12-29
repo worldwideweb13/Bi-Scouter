@@ -4,8 +4,8 @@ $spreadSheetId = $_POST["sheet_id"];
 $spreadSheetName = $_POST["sheet_name"];
 
 // スプレッドシートの URL にある spreadSheetId
-    $spreadSheetId = '1LF5yLMTUNRihxLRINZX2OLukcZd0rjhRytJEG_EjBPQ';
-    $spreadSheetName = '2020_仕入台帳';
+    // $spreadSheetId = '';
+    // $spreadSheetName = '';
 // DB各tableに共通で渡す値
     $up_date = date("Ymd");
 
