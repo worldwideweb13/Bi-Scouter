@@ -5,11 +5,11 @@ function insertTable(start_date,last_date){
       last_date: last_date,    
   };
   axios.post(url,params).then(res => {
+    // (1)(2)(3)をレコード回数分繰り返す
     res.data.result.forEach(key => {
-        console.log("OK?");     
-        console.log(key);
-        //const wrapper = $('#js-myTable')
+        // (1) id=js-myTable の要素を取得
         const wrapper = document.getElementById('js-myTable')
+        // (2) html...売上データの１レコード。（テンプレートリテラルでHTML文字列にする）
         const html = `
         <tr>
           <td id="td_1">${key["ts_date"]}</td>
@@ -21,6 +21,7 @@ function insertTable(start_date,last_date){
           <td id="td_7">￥${key["profit"]}</td>
         </tr>  
         `;
+        // (3) (1)の直下に(2)を挿入する
         wrapper.insertAdjacentHTML('beforeend',html)    
     });
   });
