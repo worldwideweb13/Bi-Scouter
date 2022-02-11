@@ -4,7 +4,7 @@
 
 ### 概要
 * 制作期間： 14日間
-* 使用技術： HTML,CSS,JS,Laravel,MySQL,GoogleSheetAPI
+* 使用技術： HTML,CSS,JS,MySQL,GoogleSheetAPI
 * プロダクト紹介映像: https://youtu.be/xwcmHFuv7Jo
 
 [棚卸しツール](https://github.com/worldwideweb13/stock-cal)をバージョンアップしたもの。
